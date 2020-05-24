@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+</head>
+<body>
+
+
+    
+      <!-- Start of Search Bar Row -->
+      <div class="row">
+        <div class="col-3">
+      
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="text">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search">Search</button>
+      </form>
+    </div>
+    <button type="button" class="btn btn-secondary">City Search 1</button>
+    <button type="button" class="btn btn-secondary">City Search 2</button>
+    <button type="button" class="btn btn-secondary">City Search 3</button>
+
+    <!-- End of Search Bar -->
+    <!-- Start of today weather card -->
+    <div class="row"></div>
+    <div class="col-1"></div>
+    <div class="card col-12">
+        <div class="card-body" id="todayWeather" data="main">
+            TODAY'S WEATHER - MAIN CARD
+            <div class="dateMain"></div>
+            <div class="cityMain"></div>
+            <div class="tempFmain"></div>
+            <div class="humidityMain"></div>
+            <div class="windMain"></div>
+            <div class="UVmain"></div>
+        </div>
+      </div>
+    </div>
+     <!-- End of today weather card -->
+     <!-- 5 day forecast -->
+    <div class="row">
+        <!-- start of day 1 forecast -->
+    <div class="col-1"></div>
+        <div class="card col-2 bg-primary">
+            <div class="card-body" id="dayOne">
+                DAY ONE WEATHER - 
+                <div class="dateOne"></div>
+                <div class="tempFone"></div>
+                <div class="humidityOne"></div>
+            </div>
+          </div>
+          <!-- End of day 1 forecast -->
+           <!-- start of day 2 forecast -->
+    <div class="card col-2 bg-primary">
+        <div class="card-body" id="todayWeather">
+            DAY TWO WEATHER - 
+            <div class="dateTwo"></div>
+            <div class="tempFtwo"></div>
+            <div class="humidityTwo"></div>
+        </div>
+      </div>
+      <!-- End of day 3 forecast -->
+             <!-- start of day 2 forecast -->
+    <div class="card col-2">
+        <div class="card-body" id="todayWeather">
+            DAY THREE WEATHER - 
+            <div class="dateThree"></div>
+            <div class="tempFthree"></div>
+            <div class="humidityThree"></div>
+        </div>
+      </div>
+      <!-- End of day 3 forecast -->
+    <!-- start of day 4 forecast -->
+    <div class="card col-2">
+        <div class="card-body" id="todayWeather">
+            DAY FOUR WEATHER - 
+            <div class="dateFour"></div>
+            <div class="tempFfour"></div>
+            <div class="humidityFour"></div>
+        </div>
+      </div>
+      <!-- End of day 4 forecast -->
+             <!-- start of day 5 forecast -->
+    <div class="card col-2">
+        <div class="card-body" id="todayWeather">
+            DAY FIVE WEATHER - 
+            <div class="dateFive"></div>
+            <div class="tempFfive"></div>
+            <div class="humidityFive"></div>
+        </div>
+      </div>
+      <!-- End of day 5 forecast -->
+    </div>
+    <!-- End of 5 day forecast card -->
+
+
+
+
+    </div>
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="java.js"></script>
+</body>
+</html>
