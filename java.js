@@ -1,6 +1,12 @@
 var localStorageCheck = localStorage.getItem("citySearchHistory")
 if (localStorageCheck){
     var localStorageParse = JSON.parse(localStorageCheck)
+    for (i=0; i<localStorageParse; i++ ) {
+    localStorage.setItem("citySearchHistory", JSON.stringify(localStorageCheck[i]));
+        // create buttons - use append function to container
+
+    console.log(localStorageParse)
+    }
 } else {
     var citySearchArray = []
     var citySearchString = JSON.stringify(citySearchArray)
@@ -9,23 +15,30 @@ if (localStorageCheck){
 
 
 
-$("#search").on("click", function(){event.target.form[0].value});
- 
-// var citySearchName =  event.target.form[0].value
-var citySearchName = $("#text").val()   
-    // Local Storage Storage Starts V
+
+$(".buttonClass").click(function(e){
+    e.preventDefault()
+
+ console.log(event);
+var citySearchName =  event.target.form[0].value
+// console.log(citySearchName)
+// // var citySearchName = $("#text").val()   
+//     // Local Storage Storage Starts V
     var citySearchResponseArray = JSON.parse(localStorage.getItem("citySearchHistory"))
     citySearchResponseArray.push(citySearchName)
     localStorage.setItem("citySearchHistory", JSON.stringify(citySearchResponseArray));
-    console.log(citySearchName)
+    // console.log(citySearchName)
+    // for every click and load above - we need to create a button
+    // find container with $(.slector).append 
+    $(".buttonTest").append("<button class= btn-secondary>" + citySearchName + "</button>");
 
     // API Process Starts V
     var APIKey = "71c64d13a9a44b3f40b1c7f4cccad4d5"
-    var inputValue = $("#text").val()   
+    // var inputValue = $("#text").val()   
 
     // $("#search").on("click", function(){
     
-    var queryURL = `https://api.openweathermap.org/data/2.5/forecast?q=Los Angeles&appid=${APIKey}`;
+    var queryURL = `https://api.openweathermap.org/data/2.5/forecast?q=${citySearchName}&appid=${APIKey}`;
     // Here we run our AJAX call to the OpenWeatherMap API
   
   $.ajax({
@@ -39,7 +52,7 @@ var citySearchName = $("#text").val()
       console.log(queryURL);
   
 //       // Log the resulting object
-    //   console.log(response);
+      console.log(response);
 
 
     //   $("#search").on("click", function(){
@@ -150,6 +163,6 @@ $(".dateTwo").html("<h5>" + response.list[17].dt_txt + "</h5>")
         //   console.log("humidity:" + humidity)
 
 
-    // });
+    });
 
 });
